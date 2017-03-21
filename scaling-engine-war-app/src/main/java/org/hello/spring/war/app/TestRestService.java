@@ -30,7 +30,19 @@ public class TestRestService {
         return "Instantiated a GPIO controller with id: " + gpioController;
     }
 
-    @RequestMapping(value = "/high")
+    @RequestMapping(value = "/pin", method = RequestMethod.GET)
+    public String provisionOutputPin() {
+        Long controllerId = 1L;
+        Long pinId = 1L;
+        String name = "myPin";
+        boolean high = true;
+
+        raspberryPiClient.provisionOutputPin(controllerId, pinId, name, high);
+
+        return "Set pin id: " + pinId + " to output pin";
+    }
+
+    @RequestMapping(value = "/high", method = RequestMethod.GET)
     public String setPinToHighOrLow(@RequestParam Boolean high) {
         Long pinId = 1L;
         raspberryPiClient.setPinToHighOrLow(pinId, high);
@@ -39,7 +51,7 @@ public class TestRestService {
         return "Did set pin " + pinId + " to: " + state;
     }
 
-    @RequestMapping(value = "/off")
+    @RequestMapping(value = "/off", method = RequestMethod.GET)
     public String shutdownGPIOController() {
         Long controllerId = 1L;
         raspberryPiClient.shutdownGPIOController(controllerId);
