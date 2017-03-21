@@ -10,7 +10,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>scaling-engine-single-board-computer</module>
+        <module>scaling-engine-common</module>
+        <module>scaling-engine-single-board-raspberry-pi</module>
         <module>scaling-engine-war-app</module>
     </modules>
 

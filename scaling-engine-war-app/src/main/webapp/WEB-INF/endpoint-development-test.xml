@@ -13,6 +13,8 @@
     <mvc:annotation-driven/>
 
     <import resource="classpath*:test-endpoint-service.xml"/>
+    <import resource="classpath*:single-board-raspberrypi-client.xml"/>
+    <import resource="classpath*:single-board-raspberrypi-service.xml"/>
 
     <!--<import resource="classpath*:cabonline-swagger.xml"/>-->
 

@@ -5,6 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="testRestService" class="org.hello.spring.war.app.TestRestService">
+        <constructor-arg name="raspberryPiClient" ref="raspberryPiClient"/>
     </bean>
 
 </beans>
