@@ -4,17 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.hello-spring</groupId>
-    <artifactId>hello-spring</artifactId>
+    <groupId>org.scaling-engine</groupId>
+    <artifactId>scaling-engine</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
-        <module>single-board-computer</module>
-        <module>hello-spring-war-app</module>
+        <module>scaling-engine-single-board-computer</module>
+        <module>scaling-engine-war-app</module>
     </modules>
 
     <properties>
-        <jetty.version>7.2.0.v20101020</jetty.version>
+        <jetty.version>9.4.2.v20170220</jetty.version>
     </properties>
 
     <dependencyManagement>
