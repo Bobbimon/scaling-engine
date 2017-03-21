@@ -73,5 +73,8 @@ public class RaspberryPiServiceImpl implements RaspberryPiService {
         }
 
         gpioControllerMap.get(controllerId).shutdown();
+        gpioControllerMap.remove(controllerId);
+        // TODO This is WRONG!!!
+        gpioPinDigitalOutputMap.clear();
     }
 }
