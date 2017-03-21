@@ -1,6 +1,7 @@
 package org.scaling.engine.single.board.raspberry.pi.component.service;
 
 import com.pi4j.io.gpio.*;
+import com.pi4j.wiringpi.GpioUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +18,14 @@ public class RaspberryPiServiceImpl implements RaspberryPiService {
     }
 
     public long createGPIOController(long id) {
+
+        GpioUtil.enableNonPrivilegedAccess();
+        if(GpioUtil.isPrivilegedAccessRequired()){
+            System.err.println("*****************************************************************");
+            System.err.println("Privileged access is required on this system to access GPIO pins!");
+            System.err.println("*****************************************************************");
+            return 1;
+        }
 
         GpioController gpioController = GpioFactory.getInstance();
 
