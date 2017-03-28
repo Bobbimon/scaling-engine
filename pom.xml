@@ -11,7 +11,7 @@
 
     <modules>
         <module>scaling-engine-common</module>
-        <module>scaling-engine-single-board-raspberry-pi</module>
+        <module>scaling-engine-raspberry-pi-component</module>
         <module>scaling-engine-war-app</module>
     </modules>
 
