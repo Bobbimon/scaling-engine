@@ -22,6 +22,7 @@
 *.a
 *.lib
 *.project
+/.settings
 **/.settings/**
 *.classpath
 
